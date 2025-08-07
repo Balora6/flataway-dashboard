@@ -26,7 +26,13 @@ const CellPage = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    updateCell(Number(cellId), {id: Number(cellId), ...cellData});
+    
+    updateCell(Number(cellId), {
+      id: Number(cellId),
+      color: cellData.color.trim(),
+      url: cellData.url.trim(),
+      title: cellData.title.trim(),
+    });
     
     router.push("/");
   };

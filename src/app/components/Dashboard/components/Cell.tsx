@@ -12,7 +12,7 @@ interface Props {
   title?: string;
 }
 
-const Cell = ({ id, color = "black", url, title }: Props) => {
+const Cell = ({ id, color = "black", url }: Props) => {
   const router = useRouter();
   const {updateCell} = useCells();
   
